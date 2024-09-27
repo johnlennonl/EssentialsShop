@@ -5,11 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BitshopVenezuelaInc</title>
+    <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--Estilo CSS-->
     <link rel="stylesheet" href="estilo/stilos.css">
+    <!--SweetAlert-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <!--SwiperJs-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -35,6 +41,55 @@
         </h2>
     </div>
 
+    <!--Productos mas Vendidos-->
+    <div class=" container-fluid mt-5 mb-5 ">
+        <h2 class="text-start tituloColeccion p-3 mb-4 mt-4 ">Nuevos Productos</h2>
+        <div class="swiper-container ">
+            <div class="swiper-wrapper text-start">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/9341e538-275f-485f-ae90-208b109d787e/JORDAN+TATUM+2.png" 
+                         alt="Product 1"
+                         onclick="showProduct('Tatum 2 \'Red Cement\'', '$150.00', 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/9341e538-275f-485f-ae90-208b109d787e/JORDAN+TATUM+2.png')">
+                    <h3>Tatum 2 "Red Cement"</h3>
+                    <p>$150.00</p>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/75e1ebe8-230a-49cb-ab6e-f2288044e90f/AIR+TRAINER+SC+HIGH.png" alt="Product 2"
+                    onclick="showProduct('Nike Air Trainer SC High', '$130.00', 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/75e1ebe8-230a-49cb-ab6e-f2288044e90f/AIR+TRAINER+SC+HIGH.png')">
+                    <h3>Nike Air Trainer SC High</h3>
+                    <p>$130.00</p>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/1858f2e4-a3a7-42ac-ad77-ed0f75d57e86/GIANNIS+IMMORTALITY+4.png" alt="Product 3"
+                    onclick="showProduct('Giannis Immortality 4', '$90.00', 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/1858f2e4-a3a7-42ac-ad77-ed0f75d57e86/GIANNIS+IMMORTALITY+4.png')">
+                    <h3>Giannis Immortality 4</h3>
+                    <p>$90.00</p>
+                </div>
+                <!-- Puedes agregar más slides para productos -->
+                <div class="swiper-slide">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0ddf973d-e905-4362-8a2b-040e862bd273/LEBRON+XXI.png" alt="Product 3"
+                    onclick="showProduct('LeBron XXI', '$110.00', 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0ddf973d-e905-4362-8a2b-040e862bd273/LEBRON+XXI.png')">
+                    <h3>LeBron XXI</h3>
+                    <p>$110.00</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/208fa98b-8958-43f6-84f5-9d53050abd36/JORDAN+LUKA+3.png" alt="Product 1"
+                    onclick="showProduct('Luka 3 Motorsport', '$150.00', 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/208fa98b-8958-43f6-84f5-9d53050abd36/JORDAN+LUKA+3.png')">
+                    <h3>Luka 3 "Motorsport"</h3>
+                    <p>$150.00</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/d9fecdc8-e9d8-4771-ab87-37b5a23c2145/JORDAN+ZION+3.png" alt="Product 1"
+                    onclick="showProduct('Zion 3 Mud, Sweat and Tears', '$150,00', 'https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/d9fecdc8-e9d8-4771-ab87-37b5a23c2145/JORDAN+ZION+3.png')">
+                    <h3>Zion 3 "Mud, Sweat and Tears"</h3>
+                    <p>$150.00</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!--CuerpoJordan-->
     <div class="container-fluid">
@@ -47,7 +102,7 @@
     <h3 class="text-start tituloColeccion p-3 mb-4 mt-4 ">JORDAN EXCLUSIVE</h3>
 </div>
     <div class="container-fluid">
-        <div class="row row-cols-1 row-cols-md-4 g-4" id="productosJordan"></div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4" id="productosJordan"></div>
     </div>
     </div>
 
@@ -85,6 +140,8 @@
 
 
     <script src="scripts/navbar.js"></script>
+    <script src="scripts/slider.js"></script>
+    <script src="scripts/verProducto.js"></script>
     <script src="scripts/productosJordan.js"></script>
     <script src="scripts/productosAirmax.js"></script>
     <script src="scripts/productosWomen.js"></script>
